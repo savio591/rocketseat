@@ -1,0 +1,18 @@
+{
+  "name": "criandoNode",
+  "version": "1.0.0",
+  "description": "Estudos do bootcamp GoStack",
+  "main": "/src/index.js",
+  "author": "savilexperiments",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ./src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "serve": "^11.3.2"
+  }
+}
