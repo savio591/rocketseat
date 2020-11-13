@@ -6,7 +6,7 @@
   "author": "savio591",
   "license": "MIT",
   "scripts": {
-    "start": "yarn webpack serve --mode development"
+    "dev": "yarn webpack serve --mode development"
   },
   "dependencies": {
     "@babel/cli": "^7.12.1",
