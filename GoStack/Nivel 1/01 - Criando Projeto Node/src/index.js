@@ -1,6 +1,7 @@
 /* importar express - criação de rotas e listening */
 const { request, response } = require("express");
 const express = require("express");
+const cors = require("cors");
 
 /* importar uuid - gerador aleatório de uma id */
 const { uuid } = require("uuidv4");
@@ -8,6 +9,7 @@ const { uuid } = require("uuidv4");
 /* abreviar express */
 const app = express();
 app.use(express.json());
+app.use(cors());
 /* Armazenando dados */
 const projects = [];
 
@@ -30,7 +32,7 @@ app.post("/projects", (request, response) => {
 
 	projects.push(project);
 
-	return response.json(projects);
+	return response.json(project);
 });
 
 app.put("/projects/:id", (request, response) => {
