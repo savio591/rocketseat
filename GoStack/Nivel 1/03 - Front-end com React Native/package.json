@@ -1,0 +1,11 @@
+{
+  "name": "frontent_react_native",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "savio591 <savio591@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-native": "^0.63.3"
+  }
+}
