@@ -1,0 +1,33 @@
+{
+  "name": "iniciando-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.9",
+    "@types/uuid": "^8.3.0",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.2.1",
+    "ts-node-dev": "^1.0.0-pre.57",
+    "types": "^0.1.1",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "date-fns": "^2.16.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "typeorm": "^0.2.29",
+    "uuid": "^8.3.1",
+    "uuidv4": "^6.2.5"
+  }
+}
