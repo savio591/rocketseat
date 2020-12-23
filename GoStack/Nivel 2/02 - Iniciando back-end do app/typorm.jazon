@@ -1,10 +1,10 @@
 {
   "type": "postgres",
-  "host": "suleiman.db.elephantsql.com",
+  "host": "localhost",
   "port": 5432,
-  "username": "zwmraeux",
-  "password": "6QgHVvNMGr7-E7_aJktqPseWgpWvNEEX",
-  "database": "zwmraeux",
+  "username": "postgres",
+  "password": "docker",
+  "database": "gostack_gobarber",
   "entities": [
     "./src/models/*.ts"
   ],
