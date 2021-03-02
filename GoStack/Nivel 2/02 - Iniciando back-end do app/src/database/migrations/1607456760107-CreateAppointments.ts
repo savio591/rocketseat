@@ -17,7 +17,7 @@ export default class CreateAppointments1607456760107 implements MigrationInterfa
           {
             name: 'provider',
             type: 'varchar',
-            isNullable: false
+            isNullable: true
           },
           {
             name: 'date',
