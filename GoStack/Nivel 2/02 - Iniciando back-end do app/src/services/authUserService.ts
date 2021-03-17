@@ -1,15 +1,19 @@
 import { getRepository } from 'typeorm';
-import { hash } from 'bcryptjs'
+import { compare, hash } from 'bcryptjs'
 
 import User from '../models/User'
 
 interface Request {
   email: string;
-  password: string
+  password: string;
+}
+
+interface Response {
+  user: User
 }
 
 class AuthUserService {
-  public async execute({ email, password }: Request): Promise<void> {
+  public async execute({ email, password }: Request): Promise<Response> {
 
     const usersRepository = getRepository(User);
 
@@ -17,6 +21,16 @@ class AuthUserService {
 
     if (!user) {
       throw new Error('Email ou senha incorreta')
+    }
+
+    const passwordMatched = await compare(password, user.password)
+
+    if (!passwordMatched) {
+      throw new Error('Email ou senha incorreta')
+    }
+
+    return {
+      user
     }
   }
 }

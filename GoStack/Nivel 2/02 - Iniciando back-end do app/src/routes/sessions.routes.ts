@@ -8,12 +8,15 @@ sessionsRouter.post('/', async (request, response) => {
   try {
 
     const { email, password } = request.body;
-    const authenticateUser = new AuthUserService().execute({email, password})
 
-    return response.json({ "message": "hellowrolwd" });
+    const authenticateUser = new AuthUserService();
+
+    const authUserRes = await authenticateUser.execute({email, password})
+
+    return response.json(authUserRes);
   }
   catch (err) {
-    return response.json({ "message": "something went wrong" })
+    return response.json({ error: err.message})
   }
 
 });
