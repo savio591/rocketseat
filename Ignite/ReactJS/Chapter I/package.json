@@ -1,8 +1,0 @@
-{
-  "name": "ignite.chapter1.1",
-  "version": "1.0.0",
-  "description": "Primeiro capitulo do bootcamp Ignite da Rocketseat",
-  "main": "/src/index.js",
-  "author": "savio591",
-  "license": "MIT"
-}
