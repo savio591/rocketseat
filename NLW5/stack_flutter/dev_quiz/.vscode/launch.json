@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "dev_quiz",
-            "request": "launch",
+            "name": "attach fluter",
+            "request": "attach",
             "type": "dart",
-            "program": "lib/main.dart"
+            "debugServer": 50211,
         }
     ]
 }
