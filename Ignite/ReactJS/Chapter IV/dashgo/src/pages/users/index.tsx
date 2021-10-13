@@ -12,14 +12,20 @@ import {
   Td,
   Tr,
   Th,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 
 import { Header } from "../../components/Header";
 import { Pagination } from "../../components/Pagination";
 import { Sidebar } from "../../components/Sidebar";
+import { ActiveLink } from "../../components/ActiveLink";
 
 export default function UserList(): JSX.Element {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  });
   return (
     <Box>
       <Header />
@@ -33,15 +39,17 @@ export default function UserList(): JSX.Element {
               Usuários
             </Heading>
 
-            <Button
-              as="a"
-              size="sm"
-              fontSize="sm"
-              colorScheme="pink"
-              leftIcon={<Icon as={RiAddLine} fontSize={20} />}
-            >
-              Criar novo
-            </Button>
+            <ActiveLink href="/users/create">
+              <Button
+                as="a"
+                size="sm"
+                fontSize="sm"
+                colorScheme="pink"
+                leftIcon={<Icon as={RiAddLine} fontSize={20} />}
+              >
+                Criar novo
+              </Button>
+            </ActiveLink>
           </Flex>
 
           <Table colorScheme="whiteAlpha">
